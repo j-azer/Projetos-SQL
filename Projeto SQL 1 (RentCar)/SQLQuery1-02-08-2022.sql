@@ -83,7 +83,7 @@ WHERE Matricula NOT IN
 Select v.Matricula, v.Estado, CONCAT(m.Nome,  '-', mo.Nome) AS Modelo, 
         'Nunca foi alugado - Shame' Mensagem  
 from Viatura v JOIN modelo mo ON mo.Id = v.IdModelo
-    JOIN Marca m ON m.Id = mo.IdMarca
+			   JOIN Marca m ON m.Id = mo.IdMarca
 where Matricula NOT IN 
     (
         -- todas as viaturas que foram alugadas
